@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euxo pipefail
+
 #Modifications: 
     #Need to hand modify the renaming section, search for: DO: RENAME
 run() {
@@ -63,10 +65,14 @@ set_up_directories() {
   fi
 
   path_name=$(pwd)
-  mkdir output_chromosomes
-  mkdir input_chromosomes; cd input_chromosomes
-  mkdir ${species}_${haplotype}; cd ${species}_${haplotype}
+  echo $path_name
+  mkdir -p output_chromosomes
+  mkdir -p input_chromosomes;
+  cd input_chromosomes
+  mkdir -p ${species}_${haplotype};
+  cd ${species}_${haplotype}
   cp $path_name/$fasta_file .
+  fasta_file="$path_name/input_chromosomes/${species}_${haplotype}/$(basename $fasta_file)"
   echo "Running in directory ${path_name}"
 }
 
@@ -512,7 +518,7 @@ cp -v -u ${path_name}/input_chromosomes/\${SPP_Hap}/chromosome_renaming.txt .
 
 #-------------------------
 mkdir isochores
-cp -v -u ${path_name}/input_chromosomes/${SPP_Hap}/isochore/*.png ./isochores
+cp -v -u ${path_name}/input_chromosomes/\${SPP_Hap}/isochore/*.png ./isochores
 
 #----------------------
 # collect editable pdf files

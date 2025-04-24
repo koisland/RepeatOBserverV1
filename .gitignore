@@ -2,3 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+Example_code
+input_chromosomes
+output_chromosomes
+post-repeats.sh
+pre-repeats.sh
+run_rptobs_chm13_chr8.sh

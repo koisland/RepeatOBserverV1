@@ -1,0 +1,25 @@
+channels:
+  - conda-forge
+  - r
+  - bioconda
+dependencies:
+  - r-base
+  - r-devtools
+  - r-matrix
+  - r-mgcv
+  - r-mass
+  - r-ggplot2
+  - r-ragg
+  - r-plotly
+  - r-ggrepel
+  - r-viridis
+  - r-vegan
+  - r-segmented
+  - r-ade4
+  - r-tidyverse
+  - r-chemospecutils
+  - r-rapportools
+  - r-dendextend
+  - r-vcfr
+  - r-seqinr
+  - r-hmisc
