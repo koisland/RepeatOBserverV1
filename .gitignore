@@ -8,3 +8,8 @@ output_chromosomes
 post-repeats.sh
 pre-repeats.sh
 run_rptobs_chm13_chr8.sh
+
+# Snakemake
+.snakemake
+logs
+asm
